@@ -2,13 +2,13 @@ const botoes = document.querySelectorAll(".botao");
 const conteudo = document.querySelectorAll(".aba-conteudo")
 const tempo = document.querySelectorAll(".contador")
 const agora = new Date();
-const tempoObjetivo1 = new Date(2024,6,25,4);
+const tempoObjetivo1 = new Date(2025,26,50,45);
 tempo[0].textContent = agora
-const tempoObjetivo2 = new Date(2024,5,31);
+const tempoObjetivo2 = new Date(2025,26,50,45);
 tempo[1].textContent = "olá"
-const tempoObjetivo3 = new Date(2024,6,20);
+const tempoObjetivo3 = new Date(2025,26,50,45);
 tempo[2].textContent = "olá"
-const tempoObjetivo4 = new Date(2024,7,30);
+const tempoObjetivo4 = new Date(2025,26,50,45);
 tempo[3].textContent = "olá"
 let segundos;
 let  minutos;
@@ -23,7 +23,11 @@ minutos = Math.floor(minutos);
 horas = Math.floor(horas);
 dias = Math.floor(dias);
 
-tempo[0].textContent = `Fallam ${dias}dias,${horas}horas,${minutos}minutos e ${segundos}segundos`
+segundos = segundos%60
+minutos = minutos%60
+horas = horas%24
+
+tempo[0].textContent = `Faltam ${dias}dias,${horas}horas,${minutos}minutos e ${segundos}segundos`
 tempoObjetivo1 - agora
 console.log(tempo);
 for(let i = 0; i < botoes.length ; i++){

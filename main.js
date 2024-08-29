@@ -30,17 +30,23 @@ minutos = minutos%60
 horas = horas%24
 
 if(segundos >= 0){
-    return `Faltam ${dias}dias,${horas}horas,${minutos}minutos e ${segundos}segundos`
+    return [dias,horas,minutos,segundos]
 }else{
     return 'Prazo finalizado'
 }
 
 }
+const tempoUm = calculaTempo(tempoObjetivo1)
+const tempoDois = calculaTempo(tempoObjetivo2)
+const tempoTres = calculaTempo(tempoObjetivo3)
+const tempoQuatro = calculaTempo(tempoObjetivo4)
 
-tempo[0].textContent = calculaTempo(tempoObjetivo1);
-tempo[1].textContent = calculaTempo(tempoObjetivo2);
-tempo[2].textContent = calculaTempo(tempoObjetivo3);
-tempo[3].textContent = calculaTempo(tempoObjetivo4);
+tempoUm[3]
+
+//tempo[0].textContent = calculaTempo(tempoObjetivo1);
+//tempo[1].textContent = calculaTempo(tempoObjetivo2);
+//tempo[2].textContent = calculaTempo(tempoObjetivo3);
+//tempo[3].textContent = calculaTempo(tempoObjetivo4);
 
 for(let i = 0; i < botoes.length ; i++){
     botoes[i].onclick = function() {
